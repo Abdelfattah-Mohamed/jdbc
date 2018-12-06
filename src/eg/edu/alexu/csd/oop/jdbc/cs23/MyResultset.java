@@ -1,4 +1,4 @@
-package eg.edu.alexu.csd.oop.test.jdbc.cs23;
+package eg.edu.alexu.csd.oop.jdbc.cs23;
 
 import java.io.InputStream;
 import java.io.Reader;
