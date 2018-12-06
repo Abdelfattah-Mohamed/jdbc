@@ -20,6 +20,10 @@ import java.util.Map;
 import java.util.Properties;
 import java.util.concurrent.Executor;
 public class MyConnection implements Connection{
+	private String path;
+	public MyConnection(String path) {
+		this.path = path;
+	}
 
 	@Override
 	public <T> T unwrap(Class<T> iface) throws SQLException {
@@ -34,8 +38,8 @@ public class MyConnection implements Connection{
 	//m3ana
 	@Override
 	public Statement createStatement() throws SQLException {
-		// TODO Auto-generated method stub
-		return null;
+		MyStatement state = new MyStatement(this,this.path);
+		return state;
 	}
 
 	@Override
@@ -78,7 +82,7 @@ public class MyConnection implements Connection{
 	//m3ana
 	@Override
 	public void close() throws SQLException {
-		// TODO Auto-generated method stub
+		
 		
 	}
 
