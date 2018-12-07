@@ -1,6 +1,7 @@
 package eg.edu.alexu.csd.oop.jdbc.cs23;
 
 import eg.edu.alexu.csd.oop.db.Database;
+import eg.edu.alexu.csd.oop.db.cs04.MyDatabase;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -12,8 +13,9 @@ import java.util.ArrayList;
 
 public class MyStatement implements Statement {
 
-    private ArrayList<String> batch = new ArrayList<>();;
-    private Database database;
+    private ArrayList<String> batch = new ArrayList<>();
+    //TODO lazem n3ml l depenency injection hena ,,
+    private Database database = new MyDatabase();
     private Connection connection;
     private ResultSet currentResultSet;
     private String path;
