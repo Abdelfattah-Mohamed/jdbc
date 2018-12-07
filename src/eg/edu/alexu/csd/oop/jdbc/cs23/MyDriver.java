@@ -9,13 +9,15 @@ import java.util.ArrayList;
 import java.util.Map;
 import java.util.Properties;
 import java.util.logging.Logger;
+import java.io.File;
 import  java.lang.UnsupportedOperationException;
 public class MyDriver implements Driver{
 	
 	//m3ana
 	@Override
 	public Connection connect(String url, Properties info) throws SQLException {
-		String path = info.getProperty("path");
+		File file = (File)info.get("path");
+		String path = file.getAbsolutePath();
 		Connection con = new MyConnection(path);
 		if(!acceptsURL(url)) {
 			return null;
