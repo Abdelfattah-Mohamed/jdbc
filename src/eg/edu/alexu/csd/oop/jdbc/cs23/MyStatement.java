@@ -12,10 +12,11 @@ import java.util.ArrayList;
 
 
 public class MyStatement implements Statement {
+	
 
     private ArrayList<String> batch = new ArrayList<>();
     //TODO lazem n3ml l depenency injection hena ,,
-    private Database database = new MyDatabase();
+    private Database database ;
     private Connection connection;
     private ResultSet currentResultSet;
     private String path;
@@ -27,9 +28,10 @@ public class MyStatement implements Statement {
         this.connection=connection;
     }
 
-    MyStatement(Connection connection,String path){
+    MyStatement(Connection connection,String path,Database mdb){
         this.connection=connection;
         this.path=path;
+        this.database=mdb;
     }
 
     @Override

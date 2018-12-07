@@ -14,9 +14,6 @@ public class PathParser {
 		Matcher match = pat.matcher(query);
 		if(match.find()) {
 		query=match.group(1)+" "+match.group(2)+" "+path+System.getProperty("file.separator")+match.group(3);
-		}else {
-			//TODO mmkn nst5dmha lw 3awzen n3rf ano me4 bymatch
-			query = null;
 		}
 		return query;
 		

@@ -19,8 +19,13 @@ import java.sql.Struct;
 import java.util.Map;
 import java.util.Properties;
 import java.util.concurrent.Executor;
+
+import eg.edu.alexu.csd.oop.db.Database;
+import eg.edu.alexu.csd.oop.db.cs04.MyDatabase;
 public class MyConnection implements Connection{
 	private String path;
+	
+	Database mdb = new MyDatabase();
 	public MyConnection(String path) {
 		this.path = path;
 	}
@@ -38,7 +43,7 @@ public class MyConnection implements Connection{
 	//m3ana
 	@Override
 	public Statement createStatement() throws SQLException {
-		MyStatement state = new MyStatement(this,this.path);
+		MyStatement state = new MyStatement(this,this.path,this.mdb);
 		return state;
 	}
 
