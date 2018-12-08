@@ -30,12 +30,14 @@ public class MyResultset implements ResultSet {
 	private boolean close = false;
 	private Statement statement;
 	private String[] columnNames;
+	private String tableName;
 
-	public void MyResultSet(Object[][] result, Statement statement, String[] columnNames) {
+	public void MyResultSet(Object[][] result, Statement statement, String[] columnNames,String tableName) {
 		this.result = result;
 		close = false;
 		this.statement = statement;
 		this.columnNames = columnNames;
+		this.tableName = tableName;
 	}
 
 	@Override

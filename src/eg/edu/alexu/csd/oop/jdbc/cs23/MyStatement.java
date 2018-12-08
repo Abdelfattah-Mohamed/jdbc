@@ -92,25 +92,30 @@ public class MyStatement implements Statement {
 	@Override
 	public boolean execute(String arg0) throws SQLException {
 		if (!closed) {
-			PathParser pp = new PathParser();
-			arg0 = pp.Parser(arg0, this.path);
-			String[] str = arg0.split(" ");
-			if (str[0].toLowerCase().equals("insert") || str[0].toLowerCase().equals("update")
-					|| str[0].toLowerCase().equals("delete")) {
-				int x = executeUpdate(arg0);
+			arg0 = arg0.toLowerCase();
+			Splitter split = new Splitter();
+			int num = split.QuerySplitter(arg0);
+			if (num == 3) {
+				int x = this.executeUpdate(arg0);
 				if (x > 0) {
 					return true;
 				} else {
 					return false;
 				}
-			} else if (str[0].toLowerCase().equals("select")) {
+			} else if (num == 2) {
 				if (executeQuery(arg0).next() || executeQuery(arg0).previous()) {
 					return true;
 				} else {
 					return false;
 				}
-			}
+			}else if (num ==1) {
+			PathParser pp = new PathParser();
+			arg0 = pp.Parser(arg0, this.path);
+			this.path = "dbs"+System.getProperty("file.separator")+pp.newPath();
 			return database.executeStructureQuery(arg0);
+		}else {// = 0
+			throw new SQLException("Syntax Error.");
+		}
 		}
 		throw new SQLException("The statement has been closed.");
 	}
@@ -154,6 +159,8 @@ public class MyStatement implements Statement {
 				// TODO elmfrod a5lyh ytb3 l 7agat y3ny walla eh ?
 				executeQuery(batch);
 				updates[i] = 0;
+			}else {// = 0 hal da sa7 keda wlla eh ? 34an mn8er exception y3ny.
+				System.out.println("Syntax Error.");
 			}
 			i++;
 		}
@@ -163,18 +170,17 @@ public class MyStatement implements Statement {
 
 	@Override
 	public ResultSet executeQuery(String arg0) throws SQLException {
-		// if(!closed){
-		// throw ?
-		// }
+		if (closed) {
+			throw new SQLException("The statement has been closed.");
+		}
 		Object[][] table = database.executeQuery(arg0);
 		String x = SQLOrder.getInstance().getTable_head();
 		x = x.replace(".xml", ".dtd");
 		String[] strings = DTDGenerator.getDTDColumns(x);
-		// String tableName = database.
-		// currentResultSet =new Resultset(table,columns,tableName,this);
-
+		PathParser pp = new PathParser();
+		String tableName = pp.getTableName(arg0);
 		MyResultset rs = new MyResultset();
-		rs.MyResultSet(table, this, strings);
+		rs.MyResultSet(table, this, strings, tableName);
 		return rs;
 	}
 
