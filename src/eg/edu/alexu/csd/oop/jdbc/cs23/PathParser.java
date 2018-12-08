@@ -11,6 +11,9 @@ public class PathParser {
 		String[] lines = path.split("JDBC");
 		if(lines.length>1) {
 		path=lines[1];
+		}else {
+			path=lines[0];
+		}
 		path=path.substring(1, path.length());
 		query = query.toLowerCase();
 		Pattern pat = Pattern.compile("\\s*(drop|create)\\s*(database)\\s*(\\w*)\\s*;?\\s*", Pattern.CASE_INSENSITIVE);
@@ -19,7 +22,7 @@ public class PathParser {
 		query=match.group(1)+" "+match.group(2)+" "+path+System.getProperty("file.separator")+match.group(3);
 		newpath = path+System.getProperty("file.separator")+match.group(3);
 		}
-	}
+	
 		return query;
 		
 	}
