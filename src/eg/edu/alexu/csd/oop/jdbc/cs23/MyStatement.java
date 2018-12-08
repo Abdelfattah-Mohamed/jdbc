@@ -108,14 +108,14 @@ public class MyStatement implements Statement {
 				} else {
 					return false;
 				}
-			}else if (num ==1) {
-			PathParser pp = new PathParser();
-			arg0 = pp.Parser(arg0, this.path);
-			this.path = "dbs"+System.getProperty("file.separator")+pp.newPath();
-			return database.executeStructureQuery(arg0);
-		}else {// = 0
-			throw new SQLException("Syntax Error.");
-		}
+			} else if (num == 1) {
+				PathParser pp = new PathParser();
+				arg0 = pp.Parser(arg0, this.path);
+				this.path = /* "dbs"+System.getProperty("file.separator")+ */pp.newPath();
+				return database.executeStructureQuery(arg0);
+			} else {// = 0
+				throw new SQLException("Syntax Error.");
+			}
 		}
 		throw new SQLException("The statement has been closed.");
 	}
@@ -159,7 +159,7 @@ public class MyStatement implements Statement {
 				// TODO elmfrod a5lyh ytb3 l 7agat y3ny walla eh ?
 				executeQuery(batch);
 				updates[i] = 0;
-			}else {// = 0 hal da sa7 keda wlla eh ? 34an mn8er exception y3ny.
+			} else {// = 0 hal da sa7 keda wlla eh ? 34an mn8er exception y3ny.
 				System.out.println("Syntax Error.");
 			}
 			i++;
