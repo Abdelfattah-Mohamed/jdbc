@@ -32,7 +32,7 @@ public class MyResultset implements ResultSet {
 	private String[] columnNames;
 	private String tableName;
 
-	public void MyResultSet(Object[][] result, Statement statement, String[] columnNames,String tableName) {
+	public MyResultset(Object[][] result, Statement statement, String[] columnNames, String tableName) {
 		this.result = result;
 		close = false;
 		this.statement = statement;
@@ -76,11 +76,13 @@ public class MyResultset implements ResultSet {
 
 	@Override
 	public String getString(int columnIndex) throws SQLException {
-
-		if (columnIndex > result[0].length || columnIndex < 1 || isClosed()) {
-			throw new SQLException("Can't Get Column Value!");
+		if (!isClosed()) {
+			if (columnIndex > result[0].length || columnIndex < 1) {
+				throw new SQLException("Can't Get Column Value!");
+			}
+			return (String) result[row - 1][columnIndex - 1];
 		}
-		return (String) result[row - 1][columnIndex - 1];
+		throw new SQLException("ResultSet is Closed");
 	}
 
 	@Override
@@ -103,17 +105,20 @@ public class MyResultset implements ResultSet {
 
 	@Override
 	public int getInt(int columnIndex) throws SQLException {
+		if (!isClosed()) {
+			if (columnIndex > result[0].length || columnIndex < 1) {
+				throw new SQLException("Can't Get Column Value!");
+			}
+			int x = Integer.parseInt(null);
+			try {
+				x = Integer.parseInt(((String) result[row - 1][columnIndex - 1]));
+			} catch (Exception e) {
+				throw new SQLException("type isn't an Integer");
+			}
+			return x;
+		}
+		throw new SQLException("ResultSet is Closed");
 
-		if (columnIndex > result[0].length || columnIndex < 1 || isClosed()) {
-			throw new SQLException("Can't Get Column Value!");
-		}
-		int x = Integer.parseInt(null);
-		try {
-			x = Integer.parseInt(((String) result[row - 1][columnIndex - 1]));
-		} catch (Exception e) {
-			throw new SQLException("type isn't an Integer");
-		}
-		return x;
 	}
 
 	@Override
@@ -184,10 +189,11 @@ public class MyResultset implements ResultSet {
 
 	@Override
 	public String getString(String columnLabel) throws SQLException {
-
-		for (int i = 0; i < columnNames.length; i++) {
-			if (columnLabel.equals(columnNames[i])) {
-				return (String) result[row - 1][i];
+		if (!isClosed()) {
+			for (int i = 0; i < columnNames.length; i++) {
+				if (columnLabel.equals(columnNames[i])) {
+					return (String) result[row - 1][i];
+				}
 			}
 		}
 
@@ -215,15 +221,21 @@ public class MyResultset implements ResultSet {
 
 	@Override
 	public int getInt(String columnLabel) throws SQLException {
-		for (int i = 0; i < columnNames.length; i++) {
-			if (columnLabel.equals(columnNames[i])) {
-				int x;
-				try {
-					x = Integer.parseInt(((String) result[row - 1][i]));
-				} catch (Exception e) {
-					throw new SQLException();
+		if (!isClosed()) {
+			for (int i = 0; i < columnNames.length; i++) {
+				if (columnLabel.equals(columnNames[i])) {
+					int x = 0;
+					try {
+						if (((String) result[row - 1][i]).equals("null")) {
+							return 0;
+						} else {
+							x = Integer.parseInt(((String) result[row - 1][i]));
+						}
+					} catch (Exception e) {
+						throw new SQLException();
+					}
+					return x;
 				}
-				return x;
 			}
 		}
 
@@ -316,18 +328,22 @@ public class MyResultset implements ResultSet {
 
 	@Override
 	public ResultSetMetaData getMetaData() throws SQLException {
-		MyResultSetMetaData rsm = new MyResultSetMetaData(this, result, columnNames,statement);
-		return rsm;
-
+		if (!isClosed()) {
+			MyResultSetMetaData rsm = new MyResultSetMetaData(result, columnNames, tableName);
+			return rsm;
+		}
+		throw new SQLException("ResultSet is Closed");
 	}
 
 	@Override
 	public Object getObject(int columnIndex) throws SQLException {
-
-		if (columnIndex > result[0].length || columnIndex < 1 || isClosed()) {
-			throw new SQLException("Can't Get Column Value!");
+		if (!isClosed()) {
+			if (columnIndex > result[0].length || columnIndex < 1) {
+				throw new SQLException("Can't Get Column Value!");
+			}
+			return result[row - 1][columnIndex - 1];
 		}
-		return result[row - 1][columnIndex - 1];
+		throw new SQLException("ResultSet is Closed");
 	}
 
 	@Override
@@ -338,13 +354,15 @@ public class MyResultset implements ResultSet {
 
 	@Override
 	public int findColumn(String columnLabel) throws SQLException {
-		for (int i = 0; i < columnNames.length; i++) {
-			if (columnLabel.equals(columnNames[i])) {
-				return i;
+		if (!isClosed()) {
+			for (int i = 0; i < columnNames.length; i++) {
+				if (columnLabel.equals(columnNames[i])) {
+					return i + 1;
+				}
 			}
+			throw new SQLException("Can't Get Column Index!");
 		}
-
-		throw new SQLException("Can't Get Column Value!");
+		throw new SQLException("ResultSet is Closed");
 	}
 
 	@Override
@@ -373,50 +391,71 @@ public class MyResultset implements ResultSet {
 
 	@Override
 	public boolean isBeforeFirst() throws SQLException {
-
-		return row < 1;
+		if (!isClosed()) {
+			return row < 1;
+		}
+		throw new SQLException("ResultSet is Closed");
 	}
 
 	@Override
 	public boolean isAfterLast() throws SQLException {
-
-		return row > result.length;
+		if (!isClosed()) {
+			return row > result.length;
+		}
+		throw new SQLException("ResultSet is Closed");
 	}
 
 	@Override
 	public boolean isFirst() throws SQLException {
-
-		return row == 1;
+		if (!isClosed()) {
+			return row == 1;
+		}
+		throw new SQLException("ResultSet is Closed");
 	}
 
 	@Override
 	public boolean isLast() throws SQLException {
+		if (!isClosed()) {
+			return row == result.length;
+		}
+		throw new SQLException("ResultSet is Closed");
 
-		return row == result.length;
 	}
 
 	@Override
 	public void beforeFirst() throws SQLException {
+		if (!isClosed()) {
+			row = 0;
+		}
+		throw new SQLException("ResultSet is Closed");
 
-		row = 0;
 	}
 
 	@Override
 	public void afterLast() throws SQLException {
+		if (!isClosed()) {
+			row = result.length + 1;
+		}
+		throw new SQLException("ResultSet is Closed");
 
-		row = result.length + 1;
 	}
 
 	@Override
 	public boolean first() throws SQLException {
+		if (!isClosed()) {
+			return absolute(1);
+		}
+		throw new SQLException("ResultSet is Closed");
 
-		return absolute(1);
 	}
 
 	@Override
 	public boolean last() throws SQLException {
+		if (!isClosed()) {
+			return absolute(-1);
+		}
+		throw new SQLException("ResultSet is Closed");
 
-		return absolute(-1);
 	}
 
 	@Override
@@ -427,12 +466,21 @@ public class MyResultset implements ResultSet {
 
 	@Override
 	public boolean absolute(int row) throws SQLException {
-
-		if (row > result.length * -1 && row <= result.length) {
-			this.row = ((row + result.length) % result.length);
-			return true;
+		if (!isClosed()) {
+			if (row > result.length * -1 && row <= result.length) {
+				this.row = ((row + result.length) % result.length);
+				return true;
+			} else {
+				if (row > 0) {
+					this.row = result.length;
+				} else {
+					this.row = -1;
+				}
+			}
+			return false;
 		}
-		return false;
+		throw new SQLException("ResultSet is Closed");
+
 	}
 
 	@Override
@@ -443,12 +491,15 @@ public class MyResultset implements ResultSet {
 
 	@Override
 	public boolean previous() throws SQLException {
-
-		if (row >= 1) {
-			row--;
-			return true;
+		if (!isClosed()) {
+			if (row >= 1) {
+				row--;
+				return true;
+			}
+			return false;
 		}
-		return false;
+		throw new SQLException("ResultSet is Closed");
+
 	}
 
 	@Override
@@ -777,8 +828,11 @@ public class MyResultset implements ResultSet {
 
 	@Override
 	public Statement getStatement() throws SQLException {
+		if (!isClosed()) {
+			return statement;
+		}
+		throw new SQLException("ResultSet is Closed");
 
-		return statement;
 	}
 
 	@Override

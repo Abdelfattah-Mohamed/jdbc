@@ -4,23 +4,18 @@ import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.Types;
-import java.util.Arrays;
-import java.util.List;
-
-import eg.edu.alexu.csd.oop.db.cs04.XML.DTDGenerator;
 
 public class MyResultSetMetaData implements ResultSetMetaData {
 
-	private MyResultset rs = new MyResultset();
 	private Object[][] result;
 	private String[] columnNames;
-	private Statement statement;
+	private String tableName;
 
-	public MyResultSetMetaData(MyResultset myResultset, Object[][] result, String[] columnNames, Statement statement) {
-		rs = myResultset;
+	public MyResultSetMetaData(Object[][] result, String[] columnNames, String tableName) {
+
 		this.result = result;
 		this.columnNames = columnNames;
-		this.statement = statement;
+		this.tableName = tableName;
 	}
 
 	@Override
@@ -67,25 +62,32 @@ public class MyResultSetMetaData implements ResultSetMetaData {
 
 	@Override
 	public String getColumnLabel(int arg0) throws SQLException {
-
-		return columnNames[rs.getInt(arg0)];
+		if (arg0 <= columnNames.length && arg0 > 0) {
+			return columnNames[arg0];
+		}
+		throw new SQLException("Out of boundaries");
 	}
 
 	@Override
 	public String getColumnName(int arg0) throws SQLException {
-
-		return columnNames[rs.getInt(arg0)];
+		if (arg0 <= columnNames.length && arg0 > 0) {
+			return columnNames[arg0];
+		}
+		throw new SQLException("Out of boundaries");
 	}
 
 	@Override
 	public int getColumnType(int arg0) throws SQLException {
-		return colType(result, arg0);
+		if (result != null) {
+			return colType(result, arg0);
+		}
+		throw new SQLException();
 	}
 
 	private static int colType(Object[][] given, int colNo) {
-		if ((given[1][colNo].toString().contains("\'"))) {
+		if ((given[0][colNo - 1].toString().contains("\'"))) {
 			return Types.VARCHAR;
-		} else if (!(given[1][colNo].toString().contains("\'"))) {
+		} else if (!(given[0][colNo - 1].toString().contains("\'"))) {
 			return Types.INTEGER;
 		}
 		return 0;
@@ -121,9 +123,7 @@ public class MyResultSetMetaData implements ResultSetMetaData {
 
 	@Override
 	public String getTableName(int arg0) throws SQLException {
-		// TODO Auto-generated method stub
-		/* After edit the dbms interface */
-		return null;
+		return tableName;
 	}
 
 	@Override

@@ -187,13 +187,11 @@ public class MyStatement implements Statement {
 		}
 		logger.log.info("Fetching ResultSet data..");
 		Object[][] table = database.executeQuery(arg0);
-		String x = SQLOrder.getInstance().getTable_head();
-		x = x.replace(".xml", ".dtd");
-		String[] strings = DTDGenerator.getDTDColumns(x);
+		Database db = new MyDatabase();
+		String[] strings = db.getSelectedColoumnsNames();
 		PathParser pp = new PathParser();
 		String tableName = pp.getTableName(arg0);
-		MyResultset rs = new MyResultset();
-		rs.MyResultSet(table, this, strings, tableName);
+		MyResultset rs = new MyResultset(table, this, strings, tableName);
 		return rs;
 	}
 
