@@ -24,9 +24,12 @@ import eg.edu.alexu.csd.oop.db.Database;
 import eg.edu.alexu.csd.oop.db.cs04.MyDatabase;
 public class MyConnection implements Connection{
 	private String path;
-	
+	private boolean closed;
+
 	Database mdb = new MyDatabase();
 	public MyConnection(String path) {
+		closed = false;
+		DBLogger.getInstance().log.info("Creating Connection.");
 		this.path = path;
 	}
 
@@ -87,7 +90,11 @@ public class MyConnection implements Connection{
 	//m3ana
 	@Override
 	public void close() throws SQLException {
-		
+		if (closed) {
+			throw new SQLException();
+		}
+		DBLogger.getInstance().log.warning("Closing connection.");
+		closed = true;
 		
 	}
 

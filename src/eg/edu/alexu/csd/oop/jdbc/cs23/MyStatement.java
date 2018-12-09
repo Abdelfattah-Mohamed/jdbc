@@ -23,13 +23,18 @@ public class MyStatement implements Statement {
 	private int timeLimit;
 	// TODO hn3delha bel path walla la2
 	private boolean closed;
+	private DBLogger logger;
 
 	// TODO m7tagen n3del 7war l 2 constructors da lama nersa 3ala tre2a
 	MyStatement(Connection connection) {
+		logger = DBLogger.getInstance();
+		logger.log.info("Statement generated.");
 		this.connection = connection;
 	}
 
 	MyStatement(Connection connection, String path, Database mdb) {
+		logger = DBLogger.getInstance();
+		logger.log.info("Statement generated..");
 		this.connection = connection;
 		this.path = path;
 		this.database = mdb;
@@ -50,8 +55,10 @@ public class MyStatement implements Statement {
 	@Override
 	public void addBatch(String arg0) throws SQLException {
 		if (closed) {
+			logger.log.warning("Commands unsupported.");
 			throw new SQLException("The statement has been closed.");
 		}
+		logger.log.info("Adding accepted batch of commands..");
 		batch.add(arg0);
 
 	}
@@ -67,6 +74,7 @@ public class MyStatement implements Statement {
 		if (closed) {
 			throw new SQLException("The statement has been closed.");
 		}
+		logger.log.warning("Clearing batch of commands.");
 		batch = new ArrayList<>();
 
 	}
@@ -80,6 +88,7 @@ public class MyStatement implements Statement {
 	@Override
 	public void close() throws SQLException {
 		// TODO ?
+		logger.log.warning("Closing connection to Statement!");
 		this.closed = true;
 	}
 
@@ -92,6 +101,7 @@ public class MyStatement implements Statement {
 	@Override
 	public boolean execute(String arg0) throws SQLException {
 		if (!closed) {
+			logger.log.info("Executing command..");
 			arg0 = arg0.toLowerCase();
 			Splitter split = new Splitter();
 			int num = split.QuerySplitter(arg0);
@@ -104,6 +114,7 @@ public class MyStatement implements Statement {
 				}
 			} else if (num == 2) {
 				if (executeQuery(arg0).next() || executeQuery(arg0).previous()) {
+					logger.log.info("Generating result of select query..");
 					return true;
 				} else {
 					return false;
@@ -145,6 +156,7 @@ public class MyStatement implements Statement {
 		if (closed) {
 			throw new SQLException("The statement has been closed.");
 		}
+		logger.log.info("Executing batch of commands..");
 		int[] updates = new int[batch.size()];
 		int i = 0;
 		for (final String batch : batch) {
@@ -173,6 +185,7 @@ public class MyStatement implements Statement {
 		if (closed) {
 			throw new SQLException("The statement has been closed.");
 		}
+		logger.log.info("Fetching ResultSet data..");
 		Object[][] table = database.executeQuery(arg0);
 		String x = SQLOrder.getInstance().getTable_head();
 		x = x.replace(".xml", ".dtd");
@@ -187,6 +200,7 @@ public class MyStatement implements Statement {
 	@Override
 	public int executeUpdate(String arg0) throws SQLException {
 		if (!closed) {
+			logger.log.info("Executing given update query..");
 			return database.executeUpdateQuery(arg0);
 		}
 
@@ -363,6 +377,7 @@ public class MyStatement implements Statement {
 
 	@Override
 	public void setQueryTimeout(int arg0) throws SQLException {
+		logger.log.warning("Setting query timeout to " + arg0 + " seconds");
 		this.timeLimit = arg0;
 
 	}

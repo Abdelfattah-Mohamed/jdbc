@@ -1,0 +1,228 @@
+Dec 08, 2018 8:54:08 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 8:54:09 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 8:54:09 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 8:54:09 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 8:54:09 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 8:54:09 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 8:54:09 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 8:54:09 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 8:54:09 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 8:54:09 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 8:54:09 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 8:54:09 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 8:54:09 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 8:54:09 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 8:54:09 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 8:54:09 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 8:54:09 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 8:54:09 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 8:54:09 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 8:54:09 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 8:54:09 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 8:54:09 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 8:54:09 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 8:54:09 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 8:54:09 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 8:54:09 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 8:54:09 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 8:54:09 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 8:54:09 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 8:54:09 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 8:54:09 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 8:54:10 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 8:54:10 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 8:54:10 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 8:54:10 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 8:54:10 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 8:54:10 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 8:54:10 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 9:14:51 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 9:14:51 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 9:14:51 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 9:14:51 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 9:14:51 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 9:14:51 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 9:14:51 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 9:14:51 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 9:14:51 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 9:14:51 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 9:14:51 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 9:14:52 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 9:14:52 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 9:14:52 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 9:14:52 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 9:14:52 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 9:14:52 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 9:14:52 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 9:14:52 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 9:14:52 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 9:14:52 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 9:14:52 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 9:14:52 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 9:14:52 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 9:14:52 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 9:14:52 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 9:14:52 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 9:14:52 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 9:14:52 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 9:14:52 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 9:14:52 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 9:14:52 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 9:14:52 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 9:14:52 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 9:14:52 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 9:14:52 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 9:14:52 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 9:14:52 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 9:15:12 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 9:15:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 9:15:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 9:15:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 9:15:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 9:15:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 9:15:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 9:15:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 9:15:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 9:15:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 9:15:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 9:15:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 9:15:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 9:15:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 9:15:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 9:15:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 9:15:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 9:15:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 9:15:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 9:15:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 9:15:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 9:15:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 9:15:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 9:15:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 9:15:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 9:15:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 9:15:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 9:15:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 9:15:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 9:15:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 9:15:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 9:15:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 9:15:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 9:15:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 9:15:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 9:15:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 08, 2018 9:15:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 08, 2018 9:15:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
