@@ -226,3 +226,529 @@ Dec 08, 2018 9:15:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
 INFO: Creating Connection.
 Dec 08, 2018 9:15:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
 WARNING: Closing connection.
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement <init>
+INFO: Statement generated..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement close
+WARNING: Closing connection to Statement!
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement <init>
+INFO: Statement generated..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement close
+WARNING: Closing connection to Statement!
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement <init>
+INFO: Statement generated..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement <init>
+INFO: Statement generated..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement <init>
+INFO: Statement generated..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement <init>
+INFO: Statement generated..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement <init>
+INFO: Statement generated..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement <init>
+INFO: Statement generated..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement <init>
+INFO: Statement generated..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement <init>
+INFO: Statement generated..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement close
+WARNING: Closing connection to Statement!
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement <init>
+INFO: Statement generated..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement close
+WARNING: Closing connection to Statement!
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement <init>
+INFO: Statement generated..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement close
+WARNING: Closing connection to Statement!
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement <init>
+INFO: Statement generated..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement close
+WARNING: Closing connection to Statement!
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement <init>
+INFO: Statement generated..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement close
+WARNING: Closing connection to Statement!
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement <init>
+INFO: Statement generated..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement close
+WARNING: Closing connection to Statement!
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement <init>
+INFO: Statement generated..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement close
+WARNING: Closing connection to Statement!
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement <init>
+INFO: Statement generated..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeQuery
+INFO: Fetching ResultSet data..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeQuery
+INFO: Fetching ResultSet data..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement close
+WARNING: Closing connection to Statement!
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement <init>
+INFO: Statement generated..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement close
+WARNING: Closing connection to Statement!
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement <init>
+INFO: Statement generated..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:13 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeQuery
+INFO: Fetching ResultSet data..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement close
+WARNING: Closing connection to Statement!
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement <init>
+INFO: Statement generated..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement close
+WARNING: Closing connection to Statement!
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement <init>
+INFO: Statement generated..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement close
+WARNING: Closing connection to Statement!
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement <init>
+INFO: Statement generated..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement close
+WARNING: Closing connection to Statement!
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement <init>
+INFO: Statement generated..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeQuery
+INFO: Fetching ResultSet data..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Generating result of select query..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeQuery
+INFO: Fetching ResultSet data..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeQuery
+INFO: Fetching ResultSet data..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement close
+WARNING: Closing connection to Statement!
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement <init>
+INFO: Statement generated..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement close
+WARNING: Closing connection to Statement!
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement <init>
+INFO: Statement generated..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement close
+WARNING: Closing connection to Statement!
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement <init>
+INFO: Statement generated..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement <init>
+INFO: Statement generated..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement close
+WARNING: Closing connection to Statement!
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement <init>
+INFO: Statement generated..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement close
+WARNING: Closing connection to Statement!
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement <init>
+INFO: Statement generated..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement close
+WARNING: Closing connection to Statement!
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement <init>
+INFO: Statement generated..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement close
+WARNING: Closing connection to Statement!
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement <init>
+INFO: Statement generated..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement <init>
+INFO: Statement generated..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement <init>
+INFO: Statement generated..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement close
+WARNING: Closing connection to Statement!
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement <init>
+INFO: Statement generated..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement close
+WARNING: Closing connection to Statement!
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement <init>
+INFO: Statement generated..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement close
+WARNING: Closing connection to Statement!
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement <init>
+INFO: Statement generated..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement close
+WARNING: Closing connection to Statement!
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement <init>
+INFO: Statement generated..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement close
+WARNING: Closing connection to Statement!
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement <init>
+INFO: Statement generated..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement close
+WARNING: Closing connection to Statement!
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement <init>
+INFO: Statement generated..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement close
+WARNING: Closing connection to Statement!
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement <init>
+INFO: Statement generated..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeQuery
+INFO: Fetching ResultSet data..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement close
+WARNING: Closing connection to Statement!
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement <init>
+INFO: Statement generated..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement close
+WARNING: Closing connection to Statement!
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement <init>
+INFO: Statement generated..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement close
+WARNING: Closing connection to Statement!
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement <init>
+INFO: Statement generated..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement close
+WARNING: Closing connection to Statement!
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement <init>
+INFO: Statement generated..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement <init>
+INFO: Statement generated..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement close
+WARNING: Closing connection to Statement!
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement <init>
+INFO: Statement generated..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement <init>
+INFO: Statement generated..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement close
+WARNING: Closing connection to Statement!
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement <init>
+INFO: Statement generated..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement execute
+INFO: Executing command..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement executeUpdate
+INFO: Executing given update query..
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement close
+WARNING: Closing connection to Statement!
+Dec 09, 2018 2:57:14 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
+WARNING: Closing connection.
