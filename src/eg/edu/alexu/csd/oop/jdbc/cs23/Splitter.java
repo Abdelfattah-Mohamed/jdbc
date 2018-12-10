@@ -2,7 +2,7 @@ package eg.edu.alexu.csd.oop.jdbc.cs23;
 
 public class Splitter {
 
-	public static int QuerySplitter(String query) {
+	public  int QuerySplitter(String query) {
 		int result = 0;
 		query = query.toLowerCase();
 		query = query.trim();

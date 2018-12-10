@@ -128,8 +128,9 @@ public class contoller_one {
 
 	public void en(ActionEvent event) {
 		try {
+			Splitter split = new Splitter();
 			Statement x = ((MyStatement) myConnection.createStatement());
-			if (Splitter.QuerySplitter(input.getText()) != 2) {
+			if (split.QuerySplitter(input.getText()) != 2) {
 				x.execute(input.getText());
 			} else {
 				resultSet = x.executeQuery(input.getText());
