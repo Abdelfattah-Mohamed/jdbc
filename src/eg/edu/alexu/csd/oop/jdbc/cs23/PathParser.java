@@ -3,14 +3,18 @@ package eg.edu.alexu.csd.oop.jdbc.cs23;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import javafx.application.Application;
+
 public class PathParser {
 
 	private String newpath;
 
 	public String Parser(String query, String path) {
-		String[] lines = path.split("JDBC");
+		String projectPath = this.getClass().getProtectionDomain().getCodeSource().getLocation().getPath();
+		String[] folders = projectPath.split("/");
+		String[] lines = path.split(folders[folders.length - 2]);
 		if (lines.length > 1) {
-			path = lines[1];
+			path = lines[lines.length - 1];
 			path = path.substring(1, path.length());
 		} else {
 			path = lines[0];
