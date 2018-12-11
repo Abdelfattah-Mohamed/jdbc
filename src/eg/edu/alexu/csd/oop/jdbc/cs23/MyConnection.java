@@ -42,10 +42,11 @@ public class MyConnection implements Connection{
 	public boolean isWrapperFor(Class<?> iface) throws SQLException {
 		throw new UnsupportedOperationException();
 	}
-	
+
 	//m3ana
 	@Override
 	public Statement createStatement() throws SQLException {
+		DBLogger.getInstance().log.info("Generating statement..");
 		MyStatement state = new MyStatement(this,this.path,this.mdb);
 		return state;
 	}
@@ -68,7 +69,7 @@ public class MyConnection implements Connection{
 	@Override
 	public void setAutoCommit(boolean autoCommit) throws SQLException {
 		throw new UnsupportedOperationException();
-		
+
 	}
 
 	@Override
@@ -79,13 +80,13 @@ public class MyConnection implements Connection{
 	@Override
 	public void commit() throws SQLException {
 		throw new UnsupportedOperationException();
-		
+
 	}
 
 	@Override
 	public void rollback() throws SQLException {
 		throw new UnsupportedOperationException();
-		
+
 	}
 	//m3ana
 	@Override
@@ -95,7 +96,7 @@ public class MyConnection implements Connection{
 		}
 		DBLogger.getInstance().log.warning("Closing connection.");
 		closed = true;
-		
+
 	}
 
 	@Override
@@ -111,7 +112,7 @@ public class MyConnection implements Connection{
 	@Override
 	public void setReadOnly(boolean readOnly) throws SQLException {
 		throw new UnsupportedOperationException();
-		
+
 	}
 
 	@Override
@@ -122,7 +123,7 @@ public class MyConnection implements Connection{
 	@Override
 	public void setCatalog(String catalog) throws SQLException {
 		throw new UnsupportedOperationException();
-		
+
 	}
 
 	@Override
@@ -133,7 +134,7 @@ public class MyConnection implements Connection{
 	@Override
 	public void setTransactionIsolation(int level) throws SQLException {
 		throw new UnsupportedOperationException();
-		
+
 	}
 
 	@Override
@@ -149,7 +150,7 @@ public class MyConnection implements Connection{
 	@Override
 	public void clearWarnings() throws SQLException {
 		throw new UnsupportedOperationException();
-		
+
 	}
 
 	@Override
@@ -176,13 +177,13 @@ public class MyConnection implements Connection{
 	@Override
 	public void setTypeMap(Map<String, Class<?>> map) throws SQLException {
 		throw new UnsupportedOperationException();
-		
+
 	}
 
 	@Override
 	public void setHoldability(int holdability) throws SQLException {
 		throw new UnsupportedOperationException();
-		
+
 	}
 
 	@Override
@@ -203,13 +204,13 @@ public class MyConnection implements Connection{
 	@Override
 	public void rollback(Savepoint savepoint) throws SQLException {
 		throw new UnsupportedOperationException();
-		
+
 	}
 
 	@Override
 	public void releaseSavepoint(Savepoint savepoint) throws SQLException {
 		throw new UnsupportedOperationException();
-		
+
 	}
 
 	@Override
@@ -220,13 +221,13 @@ public class MyConnection implements Connection{
 
 	@Override
 	public PreparedStatement prepareStatement(String sql, int resultSetType, int resultSetConcurrency,
-			int resultSetHoldability) throws SQLException {
+											  int resultSetHoldability) throws SQLException {
 		throw new UnsupportedOperationException();
 	}
 
 	@Override
 	public CallableStatement prepareCall(String sql, int resultSetType, int resultSetConcurrency,
-			int resultSetHoldability) throws SQLException {
+										 int resultSetHoldability) throws SQLException {
 		throw new UnsupportedOperationException();
 	}
 
@@ -273,13 +274,13 @@ public class MyConnection implements Connection{
 	@Override
 	public void setClientInfo(String name, String value) throws SQLClientInfoException {
 		throw new UnsupportedOperationException();
-		
+
 	}
 
 	@Override
 	public void setClientInfo(Properties properties) throws SQLClientInfoException {
 		throw new UnsupportedOperationException();
-		
+
 	}
 
 	@Override
@@ -305,7 +306,7 @@ public class MyConnection implements Connection{
 	@Override
 	public void setSchema(String schema) throws SQLException {
 		throw new UnsupportedOperationException();
-		
+
 	}
 
 	@Override
@@ -316,13 +317,13 @@ public class MyConnection implements Connection{
 	@Override
 	public void abort(Executor executor) throws SQLException {
 		throw new UnsupportedOperationException();
-		
+
 	}
 
 	@Override
 	public void setNetworkTimeout(Executor executor, int milliseconds) throws SQLException {
 		throw new UnsupportedOperationException();
-		
+
 	}
 
 	@Override

@@ -12,49 +12,51 @@ import java.util.logging.Logger;
 import java.io.File;
 import  java.lang.UnsupportedOperationException;
 public class MyDriver implements Driver{
-	
+
 	//m3ana
 	@Override
 	public Connection connect(String url, Properties info) throws SQLException {
+		DBLogger.getInstance().log.info("Attempting to connect...");
 		File file = (File)info.get("path");
 		String path = file.getAbsolutePath();
 		Connection con = new MyConnection(path);
 		if(!acceptsURL(url)) {
 			return null;
 		}else {
-		// throws exception ?
-		return con ;
+			return con ;
 		}
 	}
-	
+
 	//m3ana
 	@Override
 	public boolean acceptsURL(String url) throws SQLException {
-		// lazem a3ml condition bel url walla la2? 
+		// lazem a3ml condition bel url walla la2?
+		DBLogger.getInstance().log.info("Access to " + url + "has no security.");
 		return true;
 	}
 	//m3ana
 	@Override
 	public DriverPropertyInfo[] getPropertyInfo(String url, Properties info) throws SQLException {
+		DBLogger.getInstance().log.info("getting Property Info...");
 		if(!acceptsURL(url)) {
 			return null;
 		}else {
-		DriverPropertyInfo[] driverPropertyInfos = new DriverPropertyInfo[info.size()];
-		ArrayList keys = (ArrayList) info.keySet();
-		ArrayList values = (ArrayList) info.values();
-		 int i=0;
-	        for (Map.Entry<Object, Object> entry : info.entrySet()) {
-	            driverPropertyInfos[i] = new DriverPropertyInfo(((String) entry.getKey()), ((String) entry.getValue()));
-	            i++;
-	        }
-		return driverPropertyInfos;
+			DriverPropertyInfo[] driverPropertyInfos = new DriverPropertyInfo[info.size()];
+			ArrayList keys = (ArrayList) info.keySet();
+			ArrayList values = (ArrayList) info.values();
+			int i=0;
+			for (Map.Entry<Object, Object> entry : info.entrySet()) {
+				driverPropertyInfos[i] = new DriverPropertyInfo(((String) entry.getKey()), ((String) entry.getValue()));
+				i++;
+			}
+			return driverPropertyInfos;
 		}
 	}
 
 	@Override
 	public int getMajorVersion() {
 		throw new UnsupportedOperationException();
-		
+
 	}
 
 	@Override
