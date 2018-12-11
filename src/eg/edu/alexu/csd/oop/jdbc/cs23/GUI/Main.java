@@ -43,7 +43,7 @@ public class Main extends Application {
         /////////////////////////////////////////////////////////
         primaryStage.setTitle("JDBC");
         primaryStage.setResizable(false);
-        Scene scene = new Scene(root, 1067, 670);
+        Scene scene = new Scene(root, 1067, 720);
         primaryStage.setScene(scene);
         primaryStage.show();
     }

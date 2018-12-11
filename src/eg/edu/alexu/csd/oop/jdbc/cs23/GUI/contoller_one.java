@@ -9,15 +9,23 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.MenuBar;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.TableColumn.CellDataFeatures;
+import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.paint.Color;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 
 import javax.swing.*;
+import java.awt.*;
 import java.io.File;
+import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -49,25 +57,40 @@ public class contoller_one {
 	ListView list;
 	@FXML
 	Label lbl;
+	@FXML
+	TextField selectRowText;
+	@FXML
+	TextField selectObjectText;
+	@FXML
+	Button selectRowButton;
+	@FXML
+	Button selectObjectButton;
+	@FXML
+	Button next;
+	@FXML
+	Button prev;
+	@FXML
+	Label getObjectLabel;
 
-	//private Stage stage;
+	// private Stage stage;
 	private Connection myConnection;
-	//private boolean ava = false;
-	//private String query;
-	private ResultSet resultSet;
-	private ResultSetMetaData metaData;
+	// private boolean ava = false;
+	// private String query;
+	private ResultSet resultSet = null;
+	private ResultSetMetaData metaData = null;
 	private Statement myStatement;
+	private static boolean flag = false;
 
 	@FXML
 	void initialize() {
 		list.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
-		//ava = true;
+		// ava = true;
 		input.setDisable(false);
 	}
 
-	public void settings( Connection connection) {
+	public void settings(Connection connection) {
 		this.myConnection = connection;
-		//this.stage = stage;
+		// this.stage = stage;
 	}
 
 	public void newConnection(ActionEvent event) {
@@ -128,6 +151,28 @@ public class contoller_one {
 			ex.setDisable(true);
 			clear.setDisable(true);
 		}
+		if (selectRowText.getText().length() > 0) {
+			try {
+				int x = Integer.parseInt(selectRowText.getText());
+				selectRowButton.setDisable(false);
+			} catch (Exception e1) {
+				selectRowButton.setDisable(true);
+				selectRowText.clear();
+			}
+		} else {
+			selectRowButton.setDisable(true);
+		}
+		if (selectObjectText.getText().length() > 0) {
+			try {
+				int x = Integer.parseInt(selectObjectText.getText());
+				selectObjectButton.setDisable(false);
+			} catch (Exception e1) {
+				selectObjectButton.setDisable(true);
+				selectObjectText.clear();
+			}
+		} else {
+			selectObjectButton.setDisable(true);
+		}
 	}
 
 	public void en(ActionEvent event) {
@@ -136,15 +181,22 @@ public class contoller_one {
 			Statement x = ((MyStatement) myConnection.createStatement());
 			if (split.QuerySplitter(input.getText()) != 2) {
 				x.execute(input.getText());
-				table.setItems(null);
 			} else {
 				resultSet = x.executeQuery(input.getText());
 				metaData = resultSet.getMetaData();
+				lbl.setText("Current Table: " + metaData.getTableName(1));
+				// table = new TableView<>();
+				while (!table.getColumns().isEmpty()) {
+					table.getColumns().remove(0);
+				}
+				while (!table.getItems().isEmpty()) {
+					table.getItems().remove(0);
+				}
 				fillTable();
 				// table.getItems();
 			}
 			x.close();
-			input.setText("");
+			input.clear();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -153,21 +205,24 @@ public class contoller_one {
 	public void addbatch(ActionEvent e) {
 		list.getItems().add(input.getText());
 		try {
-			if(list.getItems().size()==1) {
-			myStatement = ((MyStatement) myConnection.createStatement());
+			if (list.getItems().size() == 1) {
+				myStatement = ((MyStatement) myConnection.createStatement());
 			}
 			myStatement.addBatch(input.getText());
+			ex.setDisable(false);
+			clear.setDisable(false);
 		} catch (SQLException e1) {
 			e1.printStackTrace();
 		}
-		input.setText("");
+		input.clear();
 	}
 
 	public void exec(ActionEvent e) {
 		try {
 			myStatement.executeBatch();
 			myStatement.close();
-			table.setItems(null);
+			ex.setDisable(true);
+			clear.setDisable(true);
 		} catch (SQLException e1) {
 			e1.printStackTrace();
 		}
@@ -176,7 +231,6 @@ public class contoller_one {
 		while (!observableList.isEmpty()) {
 			observableList.remove(0);
 		}
-
 	}
 
 	public void del(ActionEvent e) throws SQLException {
@@ -207,7 +261,6 @@ public class contoller_one {
 				x[j][i] = resultSet.getString(i + 1);
 			}
 		}
-
 		ObservableList<String[]> data = FXCollections.observableArrayList();
 		data.addAll(Arrays.asList(x));
 		data.remove(0);// remove titles from data
@@ -227,58 +280,56 @@ public class contoller_one {
 		table.setItems(data);
 	}
 
-	public void makeColumns(int count, TableView<Row> tableView) {
-		for (int m = 0; m < count; m++) {
-			TableColumn<Row, String> column = new TableColumn<>(Integer.toString(m));
-			column.setCellValueFactory(param -> {
-				// int index = Integer.parseInt(param.getTableColumn().getText());
-				int index = param.getTableView().getColumns().indexOf(param.getTableColumn());
-				List<Cell> cells = param.getValue().getCells();
-				return new SimpleStringProperty(cells.size() > index ? cells.get(index).toString() : null);
-			});
-			tableView.getColumns().add(column);
-		}
-	}
+	public void srow(ActionEvent event) {
+		if (selectRowText.getText().length() > 0) {
+			try {
+				int x = Integer.parseInt(selectRowText.getText());
+				resultSet.absolute(x);
+				selectRowText.clear();
+			} catch (Exception e) {
 
-	public int getMaxCells(List<Row> rows) {
-		int max = 0;
-		for (Row row : rows)
-			max = Math.max(max, row.getCells().size());
-		return max;
-	}
-
-	public List<Row> makeSampleData() {
-		Random random = new Random();
-		List<Row> rows = new ArrayList<>();
-		for (int i = 0; i < 16; i++) {
-			Row e = new Row();
-			int jMax = random.nextInt(6); // from 0 to 5
-			for (int j = 0; j <= jMax; j++) {
-				e.getCells().add(new Cell(Long.toHexString(random.nextLong())));
 			}
-			rows.add(e);
-		}
-		return rows;
-	}
-
-	static class Row {
-		private final List<Cell> list = new ArrayList<>();
-
-		public List<Cell> getCells() {
-			return list;
 		}
 	}
 
-	static class Cell {
-		private final String value;
-
-		public Cell(String value) {
-			this.value = value;
+	public void sobject(ActionEvent event) {
+		if (selectObjectText.getText().length() > 0) {
+			try {
+				int x = Integer.parseInt(selectObjectText.getText());
+				getObjectLabel.setTextFill(Color.BLACK);
+				getObjectLabel.setText(resultSet.getObject(x).toString());
+				selectObjectText.clear();
+			} catch (Exception e) {
+				getObjectLabel.setTextFill(Color.RED);
+				getObjectLabel.setText("CAN'T FIND OBJECT");
+			}
 		}
+	}
 
-		@Override
-		public String toString() {
-			return value;
+	public void openLog(ActionEvent event) throws IOException {
+		File log = new File("log.txt");
+		Desktop desktop = Desktop.getDesktop();
+		if (log.exists())
+			desktop.open(log);
+	}
+
+	public void prv(ActionEvent e) {
+		if (resultSet != null) {
+			try {
+				resultSet.previous();
+			} catch (SQLException e1) {
+				e1.printStackTrace();
+			}
+		}
+	}
+
+	public void nxt(ActionEvent e) {
+		if (resultSet != null) {
+			try {
+				resultSet.next();
+			} catch (SQLException e1) {
+				e1.printStackTrace();
+			}
 		}
 	}
 

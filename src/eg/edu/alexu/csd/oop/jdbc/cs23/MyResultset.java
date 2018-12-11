@@ -517,9 +517,14 @@ public class MyResultset implements ResultSet {
 	public boolean absolute(int row) throws SQLException {
 
 		if (!isClosed()) {
-			if (row > result.length * -1 && row <= result.length) {
+			if (row >= result.length * -1 && row <= result.length && row != 0) {
 				DBLogger.getInstance().log.log(Level.INFO, "ResultSet cursor set to row: " + row);
-				this.row = ((row + result.length) % result.length);
+				if (row < 0) {
+					this.row = row + result.length;
+				} else {
+					this.row = row;
+				}
+
 				return true;
 			} else {
 				if (row > 0) {
