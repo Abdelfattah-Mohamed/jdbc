@@ -27412,3 +27412,9 @@ Dec 11, 2018 3:47:51 AM eg.edu.alexu.csd.oop.jdbc.cs23.MyStatement close
 WARNING: Closing connection to Statement!
 Dec 11, 2018 3:47:51 AM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection close
 WARNING: Closing connection.
+Dec 11, 2018 12:02:53 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyDriver connect
+INFO: Attempting to connect...
+Dec 11, 2018 12:02:54 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyConnection <init>
+INFO: Creating Connection.
+Dec 11, 2018 12:02:54 PM eg.edu.alexu.csd.oop.jdbc.cs23.MyDriver acceptsURL
+INFO: Access to jdbc:xmldb://localhosthas no security.

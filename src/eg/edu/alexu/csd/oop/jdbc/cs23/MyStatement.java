@@ -87,8 +87,8 @@ public class MyStatement implements Statement {
 
 	@Override
 	public void close() throws SQLException {
-		// TODO ?
 		logger.log.warning("Closing connection to Statement!");
+        currentResultSet=null;
 		this.closed = true;
 	}
 
@@ -164,11 +164,9 @@ public class MyStatement implements Statement {
 			if (num == 2) {// it's not create nor drop) {
 				updates[i] = executeUpdate(batch);
 			} else if (num == 1) {
-				// TODO mmkn a5leh yrg3 0 l true w arg3 -1 lw false 34an atb3 ?
 				execute(batch);
 				updates[i] = 0;
 			} else if (num == 3) {
-				// TODO elmfrod a5lyh ytb3 l 7agat y3ny walla eh ?
 				executeQuery(batch);
 				updates[i] = 0;
 			} else {// = 0 hal da sa7 keda wlla eh ? 34an mn8er exception y3ny.
@@ -225,7 +223,9 @@ public class MyStatement implements Statement {
 
 	@Override
 	public Connection getConnection() throws SQLException {
-
+        if (closed) {
+            throw new SQLException("The statement has been closed.");
+        }
 		return this.connection;
 	}
 
