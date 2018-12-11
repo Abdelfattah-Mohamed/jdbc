@@ -55,14 +55,18 @@ public class MyResultset implements ResultSet {
 	}
 
 	@Override
-	public boolean next() throws SQLException {
-		DBLogger.getInstance().log.log(Level.INFO, "ResultSet curser moved forward");
-		if (row < result.length) {
-			row++;
-			return true;
-		}
-		return false;
-	}
+    public boolean next() throws SQLException {
+        if (!isClosed()) {
+            if (row < result.length) {
+                DBLogger.getInstance().log.log(Level.INFO, "ResultSet curser moved forward");
+                row++;
+                return true;
+            }
+            DBLogger.getInstance().log.log(Level.INFO, "ResultSet curser can't moved forward");
+            return false;
+        }
+        throw new SQLException("result set is closed");
+    }
 
 	@Override
 	public void close() throws SQLException {
@@ -520,7 +524,7 @@ public class MyResultset implements ResultSet {
 			if (row >= result.length * -1 && row <= result.length && row != 0) {
 				DBLogger.getInstance().log.log(Level.INFO, "ResultSet cursor set to row: " + row);
 				if (row < 0) {
-					this.row = row + result.length;
+					this.row = row + result.length+1;
 				} else {
 					this.row = row;
 				}
@@ -528,7 +532,7 @@ public class MyResultset implements ResultSet {
 				return true;
 			} else {
 				if (row > 0) {
-					this.row = result.length;
+					this.row = result.length+1;
 				} else {
 					this.row = 0;
 				}

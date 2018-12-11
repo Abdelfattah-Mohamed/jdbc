@@ -71,12 +71,12 @@
                   <ListView fx:id="list" prefHeight="273.0" prefWidth="956.0" />
                   <VBox alignment="BOTTOM_CENTER">
                      <children>
-                        <Button fx:id="clear" alignment="CENTER" mnemonicParsing="false" onAction="#del" prefHeight="54.0" prefWidth="156.0" text="Clear" textOverrun="CLIP">
+                        <Button fx:id="clear" alignment="CENTER" disable="true" mnemonicParsing="false" onAction="#del" prefHeight="54.0" prefWidth="156.0" text="Clear" textOverrun="CLIP">
                            <font>
                               <Font name="Franklin Gothic Demi" size="29.0" />
                            </font>
                         </Button>
-                        <Button fx:id="ex" alignment="CENTER" mnemonicParsing="false" onAction="#exec" prefHeight="54.0" prefWidth="228.0" text="Execute" textOverrun="CLIP">
+                        <Button fx:id="ex" alignment="CENTER" disable="true" mnemonicParsing="false" onAction="#exec" prefHeight="54.0" prefWidth="228.0" text="Execute" textOverrun="CLIP">
                            <font>
                               <Font name="Franklin Gothic Demi" size="29.0" />
                            </font>
@@ -103,7 +103,7 @@
                         <Insets right="10.0" />
                      </HBox.margin>
                   </Button>
-                  <VBox prefHeight="30.0" prefWidth="138.0">
+                  <VBox prefHeight="71.0" prefWidth="220.0">
                      <children>
                         <TextField fx:id="selectObjectText" onInputMethodTextChanged="#typing" onKeyPressed="#typing" onKeyReleased="#typing" onKeyTyped="#typing" prefHeight="42.0" prefWidth="138.0" promptText="Enter object index">
                            <HBox.margin>
