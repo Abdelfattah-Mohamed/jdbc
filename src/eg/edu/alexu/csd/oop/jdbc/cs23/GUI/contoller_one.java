@@ -50,25 +50,23 @@ public class contoller_one {
 	@FXML
 	Label lbl;
 
-	private Stage stage;
-	private MyDriver myDriver;
-	private MyConnection myConnection;
-	private boolean ava = false;
-	private String query;
+	//private Stage stage;
+	private Connection myConnection;
+	//private boolean ava = false;
+	//private String query;
 	private ResultSet resultSet;
 	private ResultSetMetaData metaData;
 
 	@FXML
 	void initialize() {
 		list.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
-		ava = true;
+		//ava = true;
 		input.setDisable(false);
 	}
 
-	public void settings(MyDriver driver, Stage stage, MyConnection connection) {
-		this.myDriver = driver;
+	public void settings( Connection connection) {
 		this.myConnection = connection;
-		this.stage = stage;
+		//this.stage = stage;
 	}
 
 	public void newConnection(ActionEvent event) {

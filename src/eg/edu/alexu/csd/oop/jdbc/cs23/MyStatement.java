@@ -18,19 +18,14 @@ public class MyStatement implements Statement {
 	// TODO lazem n3ml l depenency injection hena ,,
 	private Database database;
 	private Connection connection;
-	private ResultSet currentResultSet;
+	private ResultSet currentResultSet = null;
 	private String path;
 	private int timeLimit;
 	// TODO hn3delha bel path walla la2
 	private boolean closed;
 	private DBLogger logger;
 
-	// TODO m7tagen n3del 7war l 2 constructors da lama nersa 3ala tre2a
-	MyStatement(Connection connection) {
-		logger = DBLogger.getInstance();
-		logger.log.info("Statement generated.");
-		this.connection = connection;
-	}
+	
 
 	MyStatement(Connection connection, String path, Database mdb) {
 		logger = DBLogger.getInstance();
@@ -90,6 +85,9 @@ public class MyStatement implements Statement {
 		logger.log.warning("Closing connection to Statement!");
         currentResultSet=null;
 		this.closed = true;
+		if(currentResultSet != null) {
+		currentResultSet.close();
+	}
 	}
 
 	@Override
@@ -122,7 +120,6 @@ public class MyStatement implements Statement {
 			} else if (num == 1) {
 				PathParser pp = new PathParser();
 				arg0 = pp.Parser(arg0, this.path);
-				this.path = /* "dbs"+System.getProperty("file.separator")+ */pp.newPath();
 				return database.executeStructureQuery(arg0);
 			} else {// = 0
 				throw new SQLException("Syntax Error.");
@@ -189,8 +186,8 @@ public class MyStatement implements Statement {
 		String[] strings = db.getSelectedColoumnsNames();
 		PathParser pp = new PathParser();
 		String tableName = pp.getTableName(arg0);
-		MyResultset rs = new MyResultset(table, this, strings, tableName);
-		return rs;
+		currentResultSet = new MyResultset(table, this, strings, tableName);
+		return currentResultSet;
 	}
 
 	@Override

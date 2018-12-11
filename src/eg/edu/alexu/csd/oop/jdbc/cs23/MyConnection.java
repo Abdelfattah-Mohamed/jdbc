@@ -25,9 +25,10 @@ import eg.edu.alexu.csd.oop.db.cs04.MyDatabase;
 public class MyConnection implements Connection{
 	private String path;
 	private boolean closed;
-
-	Database mdb = new MyDatabase();
-	public MyConnection(String path) {
+	private Database mdb;
+	
+	public MyConnection(String path , Database mdb) {
+		this.mdb = mdb;
 		closed = false;
 		DBLogger.getInstance().log.info("Creating Connection.");
 		this.path = path;

@@ -12,6 +12,7 @@ import javafx.stage.Stage;
 import java.io.File;
 import java.io.IOException;
 import java.sql.Connection;
+import java.sql.Driver;
 import java.sql.SQLException;
 import java.util.Properties;
 
@@ -23,7 +24,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        MyDriver driver = new MyDriver();
+        Driver driver = new MyDriver();
         Connection connection = null;
         Properties info = new Properties();
         File dbDir = new File("gui_databases");
@@ -38,7 +39,7 @@ public class Main extends Application {
         Parent root = (Parent) fxmlLoader.load();
         /////////////////////////////////////////////////////////
         contoller_one c = fxmlLoader.getController();
-        c.settings(driver, primaryStage, (MyConnection) connection);
+        c.settings( (MyConnection) connection);
         /////////////////////////////////////////////////////////
         primaryStage.setTitle("JDBC");
         primaryStage.setResizable(false);

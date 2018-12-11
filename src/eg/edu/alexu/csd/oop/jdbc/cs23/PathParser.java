@@ -10,35 +10,21 @@ public class PathParser {
 	private String newpath;
 
 	public String Parser(String query, String path) {
-		String projectPath = this.getClass().getProtectionDomain().getCodeSource().getLocation().getPath();
-		String[] folders = projectPath.split("/");
-		String[] lines = path.split(folders[folders.length - 2]);
-		if (lines.length > 1) {
-			path = lines[lines.length - 1];
-			path = path.substring(1, path.length());
-		} else {
-			path = lines[0];
-		}
+		
 		query = query.toLowerCase();
 		Pattern pat = Pattern.compile("\\s*(drop|create)\\s*(database)\\s*(\\w*)\\s*;?\\s*", Pattern.CASE_INSENSITIVE);
 		Matcher match = pat.matcher(query);
 		if (match.find()) {
 			query = match.group(1) + " " + match.group(2) + " " + path + System.getProperty("file.separator")
 					+ match.group(3);
-			newpath = path /* + System.getProperty("file.separator") + match.group(3) */;
-		} else {
-			newpath = path;
-		}
+			
+		} 
 
 		return query;
 
 	}
 
-	public String newPath() {
-
-		return newpath;
-
-	}
+	
 
 	public String getTableName(String query) {
 		String tableName = "";
