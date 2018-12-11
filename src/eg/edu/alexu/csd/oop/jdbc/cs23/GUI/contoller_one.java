@@ -136,6 +136,7 @@ public class contoller_one {
 			Statement x = ((MyStatement) myConnection.createStatement());
 			if (split.QuerySplitter(input.getText()) != 2) {
 				x.execute(input.getText());
+				table.setItems(null);
 			} else {
 				resultSet = x.executeQuery(input.getText());
 				metaData = resultSet.getMetaData();
@@ -152,7 +153,9 @@ public class contoller_one {
 	public void addbatch(ActionEvent e) {
 		list.getItems().add(input.getText());
 		try {
+			if(list.getItems().size()==1) {
 			myStatement = ((MyStatement) myConnection.createStatement());
+			}
 			myStatement.addBatch(input.getText());
 		} catch (SQLException e1) {
 			e1.printStackTrace();
@@ -164,6 +167,7 @@ public class contoller_one {
 		try {
 			myStatement.executeBatch();
 			myStatement.close();
+			table.setItems(null);
 		} catch (SQLException e1) {
 			e1.printStackTrace();
 		}
