@@ -80,7 +80,7 @@ public class MyResultset implements ResultSet {
 	public String getString(int columnIndex) throws SQLException {
 
 		if (!isClosed()) {
-			if (columnIndex > result[0].length || columnIndex < 1) {
+			if (columnIndex > columnNames.length || columnIndex < 1) {
 				DBLogger.getInstance().log.log(Level.SEVERE, "ResultSet Can't Get Column Value!");
 				throw new SQLException("Can't Get Column Value!");
 			}
@@ -112,7 +112,7 @@ public class MyResultset implements ResultSet {
 	@Override
 	public int getInt(int columnIndex) throws SQLException {
 		if (!isClosed()) {
-			if (columnIndex > result[0].length || columnIndex < 1) {
+			if (columnIndex > columnNames.length || columnIndex < 1) {
 				DBLogger.getInstance().log.log(Level.SEVERE, "ResultSet Can't Get Column Value!");
 				throw new SQLException("Can't Get Column Value!");
 			}
@@ -354,7 +354,7 @@ public class MyResultset implements ResultSet {
 	@Override
 	public Object getObject(int columnIndex) throws SQLException {
 		if (!isClosed()) {
-			if (columnIndex > result[0].length || columnIndex < 1) {
+			if (columnIndex > columnNames.length || columnIndex < 1) {
 				DBLogger.getInstance().log.log(Level.SEVERE, "ResultSet Can't Get Column Value!");
 				throw new SQLException("Can't Get Column Value!");
 			}
@@ -525,7 +525,7 @@ public class MyResultset implements ResultSet {
 				if (row > 0) {
 					this.row = result.length;
 				} else {
-					this.row = -1;
+					this.row = 0;
 				}
 			}
 			DBLogger.getInstance().log.log(Level.INFO, "ResultSet can't find row: " + row);

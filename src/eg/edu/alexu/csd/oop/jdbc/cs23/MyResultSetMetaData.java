@@ -49,8 +49,8 @@ public class MyResultSetMetaData implements ResultSetMetaData {
 	@Override
 	public int getColumnCount() throws SQLException {
 		// TODO Auto-generated method stub
+		return columnNames.length;
 
-		return result[0].length;
 	}
 
 	@Override
@@ -71,7 +71,7 @@ public class MyResultSetMetaData implements ResultSetMetaData {
 	@Override
 	public String getColumnName(int arg0) throws SQLException {
 		if (arg0 <= columnNames.length && arg0 > 0) {
-			return columnNames[arg0-1];
+			return columnNames[arg0 - 1];
 		}
 		throw new SQLException("Out of boundaries");
 	}

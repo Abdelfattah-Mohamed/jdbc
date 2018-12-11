@@ -21,6 +21,7 @@ public class MyDriver implements Driver{
 	//m3ana
 	@Override
 	public Connection connect(String url, Properties info) throws SQLException {
+		
 		Database mdb = new MyDatabase();
 		DBLogger.getInstance().log.info("Attempting to connect...");
 		File file = (File)info.get("path");
