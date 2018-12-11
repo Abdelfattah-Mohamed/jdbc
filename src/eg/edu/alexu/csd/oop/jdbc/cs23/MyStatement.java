@@ -158,12 +158,12 @@ public class MyStatement implements Statement {
 		int i = 0;
 		for (final String batch : batch) {
 			num = split.QuerySplitter(batch);
-			if (num == 2) {// it's not create nor drop) {
+			if (num == 3) {// it's not create nor drop) {
 				updates[i] = executeUpdate(batch);
 			} else if (num == 1) {
 				execute(batch);
 				updates[i] = 0;
-			} else if (num == 3) {
+			} else if (num == 2) {
 				executeQuery(batch);
 				updates[i] = 0;
 			} else {// = 0 hal da sa7 keda wlla eh ? 34an mn8er exception y3ny.

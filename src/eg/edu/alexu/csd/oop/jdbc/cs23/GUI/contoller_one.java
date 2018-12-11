@@ -44,7 +44,7 @@ public class contoller_one {
 	@FXML
 	Button ex;
 	@FXML
-	Button x;
+	Button clear;
 	@FXML
 	ListView list;
 	@FXML
@@ -56,6 +56,7 @@ public class contoller_one {
 	//private String query;
 	private ResultSet resultSet;
 	private ResultSetMetaData metaData;
+	private Statement myStatement;
 
 	@FXML
 	void initialize() {
@@ -122,10 +123,10 @@ public class contoller_one {
 		}
 		if (list.getItems().size() > 0) {
 			ex.setDisable(false);
-			x.setDisable(false);
+			clear.setDisable(false);
 		} else {
 			ex.setDisable(true);
-			x.setDisable(true);
+			clear.setDisable(true);
 		}
 	}
 
@@ -151,9 +152,8 @@ public class contoller_one {
 	public void addbatch(ActionEvent e) {
 		list.getItems().add(input.getText());
 		try {
-			Statement x = ((MyStatement) myConnection.createStatement());
-			x.executeBatch();
-			x.close();
+			myStatement = ((MyStatement) myConnection.createStatement());
+			myStatement.addBatch(input.getText());
 		} catch (SQLException e1) {
 			e1.printStackTrace();
 		}
@@ -162,9 +162,8 @@ public class contoller_one {
 
 	public void exec(ActionEvent e) {
 		try {
-			Statement x = ((MyStatement) myConnection.createStatement());
-			x.executeBatch();
-			x.close();
+			myStatement.executeBatch();
+			myStatement.close();
 		} catch (SQLException e1) {
 			e1.printStackTrace();
 		}
@@ -177,7 +176,9 @@ public class contoller_one {
 	}
 
 	public void del(ActionEvent e) throws SQLException {
-		ObservableList<String> observableList = list.getSelectionModel().getSelectedItems();
+		myStatement.clearBatch();
+		myStatement.close();
+		ObservableList<String> observableList = list.getItems();
 		while (!observableList.isEmpty()) {
 			list.getItems().remove(observableList.remove(0));
 		}
