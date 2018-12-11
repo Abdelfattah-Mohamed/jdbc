@@ -33,6 +33,7 @@ public class MyStatement implements Statement {
 		this.connection = connection;
 		this.path = path;
 		this.database = mdb;
+		closed = false;
 	}
 
 	@Override
@@ -82,12 +83,14 @@ public class MyStatement implements Statement {
 
 	@Override
 	public void close() throws SQLException {
+		if(!closed) {
 		logger.log.warning("Closing connection to Statement!");
         currentResultSet=null;
 		this.closed = true;
 		if(currentResultSet != null) {
 		currentResultSet.close();
 	}
+		}
 	}
 
 	@Override
@@ -270,7 +273,9 @@ public class MyStatement implements Statement {
 
 	@Override
 	public int getQueryTimeout() throws SQLException {
-
+		if(closed) {
+			throw new SQLException();
+		}
 		return timeLimit;
 	}
 
@@ -372,6 +377,9 @@ public class MyStatement implements Statement {
 
 	@Override
 	public void setQueryTimeout(int arg0) throws SQLException {
+		if(closed) {
+			throw new SQLException();
+		}
 		logger.log.warning("Setting query timeout to " + arg0 + " seconds");
 		this.timeLimit = arg0;
 

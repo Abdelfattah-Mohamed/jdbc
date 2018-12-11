@@ -21,7 +21,9 @@ public class MyDriver implements Driver{
 	//m3ana
 	@Override
 	public Connection connect(String url, Properties info) throws SQLException {
-		
+		if(url == null) {
+			throw new SQLException();
+		}
 		Database mdb = new MyDatabase();
 		DBLogger.getInstance().log.info("Attempting to connect...");
 		File file = (File)info.get("path");
@@ -32,12 +34,17 @@ public class MyDriver implements Driver{
 		}else {
 			return con ;
 		}
+		
 	}
 
 	//m3ana
 	@Override
 	public boolean acceptsURL(String url) throws SQLException {
 		// lazem a3ml condition bel url walla la2?
+		// bt throw l exception bta3 l DBMS 3ady
+		if(url == null) {
+			throw new SQLException();
+		}
 		DBLogger.getInstance().log.info("Access to " + url + "has no security.");
 		return true;
 	}

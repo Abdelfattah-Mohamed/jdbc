@@ -1,7 +1,7 @@
 package eg.edu.alexu.csd.oop.jdbc.cs23;
 
 import java.sql.Array;
-import  java.lang.UnsupportedOperationException;
+import java.lang.UnsupportedOperationException;
 import java.sql.Blob;
 import java.sql.CallableStatement;
 import java.sql.Clob;
@@ -22,12 +22,13 @@ import java.util.concurrent.Executor;
 
 import eg.edu.alexu.csd.oop.db.Database;
 import eg.edu.alexu.csd.oop.db.cs04.MyDatabase;
-public class MyConnection implements Connection{
+
+public class MyConnection implements Connection {
 	private String path;
 	private boolean closed;
 	private Database mdb;
-	
-	public MyConnection(String path , Database mdb) {
+
+	public MyConnection(String path, Database mdb) {
 		this.mdb = mdb;
 		closed = false;
 		DBLogger.getInstance().log.info("Creating Connection.");
@@ -44,11 +45,16 @@ public class MyConnection implements Connection{
 		throw new UnsupportedOperationException();
 	}
 
-	//m3ana
+	// m3ana
 	@Override
 	public Statement createStatement() throws SQLException {
+		if (closed) {
+
+			throw new SQLException();
+
+		}
 		DBLogger.getInstance().log.info("Generating statement..");
-		MyStatement state = new MyStatement(this,this.path,this.mdb);
+		MyStatement state = new MyStatement(this, this.path, this.mdb);
 		return state;
 	}
 
@@ -89,15 +95,14 @@ public class MyConnection implements Connection{
 		throw new UnsupportedOperationException();
 
 	}
-	//m3ana
+
+	// m3ana
 	@Override
 	public void close() throws SQLException {
-		if (closed) {
-			throw new SQLException();
-		}
+		if(!closed) {
 		DBLogger.getInstance().log.warning("Closing connection.");
 		closed = true;
-
+		}
 	}
 
 	@Override
@@ -222,13 +227,13 @@ public class MyConnection implements Connection{
 
 	@Override
 	public PreparedStatement prepareStatement(String sql, int resultSetType, int resultSetConcurrency,
-											  int resultSetHoldability) throws SQLException {
+			int resultSetHoldability) throws SQLException {
 		throw new UnsupportedOperationException();
 	}
 
 	@Override
 	public CallableStatement prepareCall(String sql, int resultSetType, int resultSetConcurrency,
-										 int resultSetHoldability) throws SQLException {
+			int resultSetHoldability) throws SQLException {
 		throw new UnsupportedOperationException();
 	}
 
