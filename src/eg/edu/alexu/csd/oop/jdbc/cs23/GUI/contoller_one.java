@@ -2,20 +2,25 @@ package eg.edu.alexu.csd.oop.jdbc.cs23.GUI;
 
 import eg.edu.alexu.csd.oop.jdbc.cs23.*;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.control.TableColumn.CellDataFeatures;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import javafx.util.Callback;
 
 import javax.swing.*;
 import java.io.File;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Properties;
 import java.util.Random;
@@ -25,7 +30,7 @@ public class contoller_one {
 	@FXML
 	MenuBar menu;
 	@FXML
-	TableView table;
+	TableView<String[]> table = new TableView<>();
 	@FXML
 	TextField input;
 	@FXML
@@ -109,7 +114,7 @@ public class contoller_one {
 	}
 
 	public void typing(KeyEvent e) throws SQLException {
-		fillTable();
+		// fillTable();
 		if (input.getText().length() > 0) {
 			addBatch.setDisable(false);
 			enter.setDisable(false);
@@ -136,6 +141,7 @@ public class contoller_one {
 				resultSet = x.executeQuery(input.getText());
 				metaData = resultSet.getMetaData();
 				fillTable();
+				// table.getItems();
 			}
 			x.close();
 			input.setText("");
@@ -180,39 +186,42 @@ public class contoller_one {
 	}
 
 	public void fillTable() throws SQLException {
-		Object[][] array = { { 1, "Ahmad", 20 }, { 2, "Ahmed", 21 }, { 3, "Ahm", 23 } };
-		Statement st = myConnection.createStatement();
-		String[] cn = { "ID", "Name", "Mark" };
-		String tn = "table";
-		resultSet = new MyResultset(array, st, cn, tn);
-		metaData = resultSet.getMetaData();
 		int metaCount = metaData.getColumnCount();
-		ObservableList<List<Object>> data = FXCollections.observableArrayList();
-		// for (int i = 0; i < metaCount; i++) {
-		// String name = metaData.getColumnName(i + 1);
-		// TableColumn tableColumn = new TableColumn(name);
-		// table.getColumns().add(tableColumn);
-		// List<Object> col = new ArrayList<>();
-		// while (!resultSet.isLast()) {
-		// resultSet.next();
-		// col.add(resultSet.getObject(i + 1));
-		// }
-		// data.add(col);
-		// }
-		// List<List<Object>> d = new ArrayList<>();
+		resultSet.absolute(0);
+		int count = 0;
 		while (!resultSet.isLast()) {
-			List<Object> col = null;
+			count++;
 			resultSet.next();
-			col = new ArrayList<>();
+		}
+		String[][] x = new String[count + 1][metaCount];
+		for (int i = 0; i < metaCount; i++) {
+			x[0][i] = metaData.getColumnName(i + 1);
+		}
+		resultSet.absolute(0);
+		for (int j = 1; !resultSet.isLast(); j++) {
+			resultSet.next();
 			for (int i = 0; i < metaCount; i++) {
-				String name = metaData.getColumnName(i + 1);
-				col.add(resultSet.getObject(i + 1));
+				x[j][i] = resultSet.getString(i + 1);
 			}
-			data.add(col);
+		}
+
+		ObservableList<String[]> data = FXCollections.observableArrayList();
+		data.addAll(Arrays.asList(x));
+		data.remove(0);// remove titles from data
+		// TableView<String[]> table = new TableView<>();
+		for (int i = 0; i < x[0].length; i++) {
+			TableColumn tc = new TableColumn(x[0][i]);
+			final int colNo = i;
+			tc.setCellValueFactory(new Callback<CellDataFeatures<String[], String>, ObservableValue<String>>() {
+				@Override
+				public ObservableValue<String> call(CellDataFeatures<String[], String> p) {
+					return new SimpleStringProperty((p.getValue()[colNo]));
+				}
+			});
+			tc.setPrefWidth(1025 / metaCount);
+			table.getColumns().add(tc);
 		}
 		table.setItems(data);
-		System.out.println(data.size());
-
 	}
 
 	public void makeColumns(int count, TableView<Row> tableView) {
