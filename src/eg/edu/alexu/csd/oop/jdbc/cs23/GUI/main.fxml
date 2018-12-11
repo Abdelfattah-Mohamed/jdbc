@@ -76,7 +76,7 @@
                               <Font name="Franklin Gothic Demi" size="29.0" />
                            </font>
                         </Button>
-                        <Button alignment="CENTER" mnemonicParsing="false" onAction="#del" prefHeight="54.0" prefWidth="156.0" text="X" textOverrun="CLIP" fx:id="x">
+                        <Button fx:id="clear" alignment="CENTER" mnemonicParsing="false" onAction="#del" prefHeight="54.0" prefWidth="156.0" text="Clear" textOverrun="CLIP">
                            <font>
                               <Font name="Franklin Gothic Demi" size="29.0" />
                            </font>
@@ -85,12 +85,12 @@
                   </VBox>
                </children>
             </HBox>
-            <Label fx:id="lbl" text="Current Table: t1">
+            <Label fx:id="lbl" text="Current Table: ">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <TableView fx:id="table" disable="true" prefHeight="570.0" prefWidth="1024.0" />
+            <TableView fx:id="table" prefHeight="570.0" prefWidth="1024.0" />
          </children>
       </VBox>
    </children>
